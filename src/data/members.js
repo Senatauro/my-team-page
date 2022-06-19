@@ -1,4 +1,4 @@
-export default [
+const data = [
     {
         name: "Bill Mahoney",
         title: "Product Owner",
@@ -30,3 +30,5 @@ export default [
         photo: "/images/photo6.png",
     }
 ]
+
+export default data;
