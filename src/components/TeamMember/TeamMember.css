@@ -1,0 +1,28 @@
+.team-member-card{
+    display: grid;
+    grid-template:
+    "image title" auto
+    "name name" auto
+}
+
+.team-member-card-img{
+    width: 100%;
+    grid-area: image;
+    margin-bottom: 10px;
+}
+
+.team-member-card-title{
+    grid-area: title;
+    font-family: 'PT Serif';
+    font-size: 12px;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    margin-left: 10px;
+}
+
+.team-member-card-name{
+    grid-area: name;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+}

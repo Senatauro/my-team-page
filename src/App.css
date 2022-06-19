@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page{
+  margin: auto;
+  padding: 24px;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.my-team{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 64px;
+  margin-bottom: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.my-team-title{
+  font-family: 'PT Serif';
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: -0.045em;
+}
+
+.my-team-info{
+  width: 440px;
+}
+
+.my-team-info-header{
+  font-family: 'Poppins';
+  font-size: 18px;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.my-team-info-body{
+  font-family: 'Poppins';
+  font-size: 18px;
+}
+
+.my-team-members{
+  width: 100%;
+  display:  grid;
+  grid-template: 
+  "t1 . t3" auto
+  "t1 t2 t3" auto
+  "t1 t2 t3" auto
+  "t1 t2 t3" auto
+  ". t2 ." auto
+  "t4 . t6" auto
+  "t4 t5 t6" auto
+  "t4 t5 t6" auto
+  "t4 t5 t6" auto
+  ". t5 ." auto / 1fr 1fr 1fr;
+
+  grid-gap: 64px;
+}
+
+.t1{
+  grid-area: t1;
+}
+.t2{
+  grid-area: t2;
+}
+.t3{
+  grid-area: t3;
+}
+.t4{
+  grid-area: t4;
+}
+.t5{
+  grid-area: t5;
+}
+.t6{
+  grid-area: t6;
+}
+
+footer, footer a{
+  align-self: center;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  color: #BDBDBD;
+  margin-top: 48px;
+}
+
+@media screen and (max-width: 640px) {
+  .page{
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .my-team{
+    flex-direction: column;
+    gap: 38px;
+  }
+
+  .my-team-info-body{
+    font-size: 14px;
+  }
+
+
+  .my-team-members{
+    width: 100%;
+    display:  grid;
+    grid-template: 
+    "t1 . " auto
+    "t1 t2" auto
+    ". t2" auto
+    "t3 . " auto
+    "t3 t4" auto
+    ". t4" auto
+    "t5 . " auto
+    "t5 t6" auto
+    ". t6" auto;
+  
+    grid-gap: 16px;
   }
 }
